@@ -1,0 +1,13 @@
+:root {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgba(245, 245, 245, 1);
+    font-size: 1rem;
+}
+
+.navbar {
+    background-color: rgba(0, 60, 68, 1);
+}
+
+.navbar h3, .navbar span {
+    color: rgba(245, 245, 245, 1);
+}

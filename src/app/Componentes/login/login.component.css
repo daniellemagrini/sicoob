@@ -1,0 +1,115 @@
+:root {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgba(245, 245, 245, 1);
+    font-size: 1rem;
+}
+
+body {
+    background-color: rgba(0, 60, 68, 1);
+    background-image: url("../../../assets/login/Fundo.svg");
+    background-repeat: repeat;
+}
+
+.titulo {
+    margin-top: 10.375rem;
+}
+
+.labelUsuario, .labelSenha {
+    font-weight: 700;
+}
+
+#inputUsuario, #inputSenha, .fazerLogin {
+    width: 19.375rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+}
+
+#inputUsuario, #inputSenha {
+    border: 1px solid rgba(245, 245, 245, 1);
+    background: rgba(0, 60, 68, 1);
+}
+
+#inputUsuario:not(:placeholder-shown), #inputSenha:not(:placeholder-shown) {
+    background: rgba(245, 245, 245, 1);
+}
+
+.visibility_off, .visibility {
+    color: rgb(238, 241, 241);
+}
+
+.hide {
+    display: none;
+}
+
+.input-wrapper button {
+    position: relative;
+    margin-top: .5rem;
+    left: -2.5rem;
+}
+
+.esqueceuSenha a {
+    color: rgba(114, 191, 68);
+    font-size: .75rem;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.fazerLogin {
+    background-color: rgba(245, 245, 245);
+    cursor: pointer;
+}
+
+.fazerLogin button {
+    font-weight: 700;
+}
+
+#recipient-email, #recipient-senha, #recipient-confirmar-senha, #recipient-cod {
+    border:none;
+    border-bottom: 3px solid rgba(0, 60, 68, 1);
+}
+input:focus {
+    outline: none;
+}
+
+.inputEmailEsqueciSenha {
+    color: rgba(0, 60, 68, 1);
+    font-weight: 400;
+}
+
+.footerProximoEsqueciSenha, .footerProximoAcesso {
+    background-color: rgba(0, 60, 68, 1);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.footerProximoEsqueciSenha button, .footerProximoAcesso button {
+    color: rgba(245, 245, 245, 1);
+    font-weight: 600;
+}
+
+.footerCancelarEsqueciSenha a, .footerCancelarAcesso a, .footerReenviarCodAcesso a {
+    color: rgba(114, 191, 68, 1);
+    text-decoration-line: underline;
+    font-size: .7rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.alertaNovaSenha {
+    background-color: rgba(244, 221, 221, 1);
+    color: rgba(252, 51, 51, 1);
+    border: 1px solid rgba(252, 51, 51, 1);
+    border-radius: 0.2rem;
+}
+
+.alertaNovaSenha span {
+    color: rgba(252, 51, 51, 1);
+}
+
+.novaSenha span, .novaSenha label, .confirmarSenha span, .confirmarSenha label {
+    color: rgba(0, 60, 68, 1);
+    font-weight: 400;
+}
+

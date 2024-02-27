@@ -1,0 +1,12 @@
+:root {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-color: rgba(245, 245, 245, 0.5);
+    font-size: 1rem;
+    color: rgba(25, 25, 25, 1);
+    font-weight: 400;
+}
+
+#drpUnidade {
+    border: 1px solid rgba(151, 151, 151, 1);
+    appearance: none;
+}
