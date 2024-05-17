@@ -1,0 +1,110 @@
+:root {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgba(245, 245, 245, 1);
+    font-size: 1rem;
+    overflow-y: auto;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbarTitulo {
+    background-color: rgba(50, 188, 173, 1);
+}
+
+.navbarTitulo h3 {
+    color: rgba(245, 245, 245, 1);
+    font-weight: 700;
+}
+
+.main-container {
+    transition: transform 0.3s ease;
+}
+
+.navbar {
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1000;
+}
+
+.move-right {
+    transform: translateX(16rem);
+}
+
+.main-container.move-right {
+    transform: translateX(16rem);
+    transition: transform 0.3s ease;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    height: 100%;
+    background: #003C44;
+    transform: translateX(-16rem);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-overlay.show {
+    transform: translateX(0);
+}
+
+.imgIconEditUserMob, .imgIconEditUserMobHover, .imgIconEditUser, .imgIconEditUserHover {
+    cursor: pointer;
+}
+
+.imgIconEditUserMobHover, .imgIconEditUser, .imgIconEditUserHover {
+    display: none;
+}
+
+.iconeEditar:hover .imgIconEditUserMob {
+    display: none;
+}
+
+.iconeEditar:hover .imgIconEditUserMobHover {
+    display: block;
+    transform: scale(1);
+}
+
+.processos {
+    border: 2px solid rgba(0, 60, 68, 1);
+    background-color: rgba(0, 60, 68, 1);
+    border-radius: .5rem;
+    color: rgba(245, 245, 245, 1);
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    .navbar {
+        display: block;
+    }
+
+    .imgIconEditUser {
+        display: block;
+    }
+
+    .imgIconEditUserMob, .imgIconEditUserMobHover, .imgIconEditUserHover {
+        display: none;
+    }
+
+    .iconeEditar:hover .imgIconEditUser {
+        display: none;
+    }
+
+    .iconeEditar:hover .imgIconEditUserMobHover {
+        display: none;
+    }
+    
+    .iconeEditar:hover .imgIconEditUserHover {
+        display: block;
+        transform: scale(1);
+    }
+}

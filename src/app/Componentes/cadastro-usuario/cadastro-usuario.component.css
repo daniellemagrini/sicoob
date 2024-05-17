@@ -1,0 +1,172 @@
+:root {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgba(245, 245, 245, 1);
+    font-size: 1rem;
+    overflow-y: auto;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbarTitulo {
+    background-color: rgba(50, 188, 173, 1);
+}
+
+.navbarTitulo h3 {
+    color: rgba(245, 245, 245, 1);
+    font-weight: 700;
+}
+
+.dadosUsuario h2 {
+    color: rgba(0, 60, 68, 1);
+    font-weight: 700;
+}
+
+.dadosUsuario label {
+    color: rgba(25, 25, 25, 1);
+    font-weight: 400;
+    margin-right: .5rem;
+}
+
+.dadosUsuario input, .dadosUsuario select {
+    border: 1px solid rgba(151, 151, 151, 1);
+    border-radius: .5rem;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0.2rem 1rem .5rem 0;
+}
+
+.btProximo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.btn-next {
+    background-color: rgba(0, 60, 68, 1);
+    color: rgba(245, 245, 245, 1);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-next:hover {
+    background-color: #002a30;
+}
+
+.btn-next:focus {
+    outline: none;
+}
+
+.body {
+    background-color: rgba(0, 60, 68, 1);
+}
+
+.tituloMenu {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+}
+
+.main-container {
+    transition: transform 0.3s ease;
+}
+
+.navbar {
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1000;
+}
+
+.move-right {
+    transform: translateX(16rem);
+}
+
+.main-container.move-right {
+    transform: translateX(16rem);
+    transition: transform 0.3s ease;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    height: 100%;
+    background: #003C44;
+    transform: translateX(-16rem);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-overlay.show {
+    transform: translateX(0);
+}
+
+.imgIconCadUserMob, .imgIconCadUserMobHover, .imgIconCadUser, .imgIconCadUserHover,
+.imgIconConUserMob, .imgIconConUserMobHover, .imgIconConUser, .imgIconConUserHover,
+.imgIconConfUserMob, .imgIconConfUserMobHover, .imgIconConfUser, .imgIconConfUserHover {
+    cursor: pointer;
+}
+
+.imgIconCadUserMob, .imgIconCadUser, .imgIconCadUserHover,
+.imgIconConUserMobHover, .imgIconConUser, .imgIconConUserHover,
+.imgIconConfUserMobHover, .imgIconConfUser, .imgIconConfUserHover {
+    display: none;
+}
+
+.iconeCadastrar:hover .imgIconCadUserMobHover,
+.iconeConsultar:hover .imgIconConUserMob,
+.iconeConfigurar:hover .imgIconConfUserMob {
+    display: none;
+}
+
+.iconeCadastrar:hover .imgIconCadUserMob,
+.iconeConsultar:hover .imgIconConUserMobHover,
+.iconeConfigurar:hover .imgIconConfUserMobHover {
+    display: block;
+    transform: scale(1);
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar {
+        display: block;
+    }
+
+    .imgIconCadUserHover, .imgIconConUser, .imgIconConfUser {
+        display: block;
+    }
+
+    .imgIconCadUserMobHover, .imgIconConUserMob, .imgIconConfUserMob {
+        display: none;
+    }
+
+    .iconeCadastrar:hover .imgIconCadUserHover,
+    .iconeConsultar:hover .imgIconConUser,
+    .iconeConfigurar:hover .imgIconConfUser {
+        display: none;
+    }
+
+    .iconeCadastrar:hover .imgIconCadUserMob,
+    .iconeConsultar:hover .imgIconConUserMobHover,
+    .iconeConfigurar:hover .imgIconConfUserMobHover {
+        display: none;
+    }
+    
+    .iconeCadastrar:hover .imgIconCadUser,
+    .iconeConsultar:hover .imgIconConUserHover,
+    .iconeConfigurar:hover .imgIconConfUserHover {
+        display: block;
+        transform: scale(1);
+    }
+
+    .btn-next {
+        font-size: 1rem;
+        padding: 0.5rem 2rem;
+    }
+}

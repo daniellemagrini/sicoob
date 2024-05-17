@@ -10,3 +10,20 @@
     border: 1px solid rgba(151, 151, 151, 1);
     appearance: none;
 }
+
+.imgIconPAHover, .imgIconTransacoesHover, .imgIconTranspHover, .imgIconParamHover, .imgIconUsersHover {
+    display: none;
+}
+
+.iconePA:hover .imgIconPA, .iconeTransacoes:hover .imgIconTransacoes, .iconeTransp:hover .imgIconTransp,
+.iconeParam:hover .imgIconParam, .iconeUsers:hover .imgIconUsers {
+    display: none;
+}
+
+.iconePA:hover .imgIconPAHover, .iconeTransacoes:hover .imgIconTransacoesHover, .iconeTransp:hover .imgIconTranspHover,
+.iconeParam:hover .imgIconParamHover, .iconeUsers:hover .imgIconUsersHover {
+    display: block;
+    transform: scale(1.2);
+}
+
+

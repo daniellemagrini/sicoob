@@ -1,0 +1,12 @@
+:root {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgba(245, 245, 245, 1);
+    font-size: 1rem;
+}
+
+@media only screen and (max-device-width: 992px) {
+    
+    .navbar{
+        display:none;
+    }
+}

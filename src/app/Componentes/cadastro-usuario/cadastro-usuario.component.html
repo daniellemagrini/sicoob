@@ -1,0 +1,100 @@
+<app-menu-hamburguer class="navbar"></app-menu-hamburguer>
+
+<div class="main-container" [ngClass]="{'move-right': menuOpen}">
+  <div class="navbarTitulo">
+    <div class="w-full h-10 flex justify-center content-center items-center mx-6 geral">
+      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="18" viewBox="0 0 37 28" fill="none">
+        <path d="M0.166504 27.3333V22.6667C0.166504 21.7222 0.409559 20.8542 0.895671 20.0625C1.38178 19.2708 2.02762 18.6667 2.83317 18.25C4.55539 17.3889 6.30539 16.7431 8.08317 16.3125C9.86095 15.8819 11.6665 15.6667 13.4998 15.6667C15.3332 15.6667 17.1387 15.8819 18.9165 16.3125C20.6943 16.7431 22.4443 17.3889 24.1665 18.25C24.9721 18.6667 25.6179 19.2708 26.104 20.0625C26.5901 20.8542 26.8332 21.7222 26.8332 22.6667V27.3333H0.166504ZM30.1665 27.3333V22.3333C30.1665 21.1111 29.8262 19.9375 29.1457 18.8125C28.4651 17.6875 27.4998 16.7222 26.2498 15.9167C27.6665 16.0833 28.9998 16.3681 30.2498 16.7708C31.4998 17.1736 32.6665 17.6667 33.7498 18.25C34.7498 18.8056 35.5137 19.4236 36.0415 20.1042C36.5693 20.7847 36.8332 21.5278 36.8332 22.3333V27.3333H30.1665ZM13.4998 14C11.6665 14 10.0971 13.3472 8.7915 12.0417C7.48595 10.7361 6.83317 9.16667 6.83317 7.33334C6.83317 5.5 7.48595 3.93056 8.7915 2.62501C10.0971 1.31945 11.6665 0.666672 13.4998 0.666672C15.3332 0.666672 16.9026 1.31945 18.2082 2.62501C19.5137 3.93056 20.1665 5.5 20.1665 7.33334C20.1665 9.16667 19.5137 10.7361 18.2082 12.0417C16.9026 13.3472 15.3332 14 13.4998 14ZM30.1665 7.33334C30.1665 9.16667 29.5137 10.7361 28.2082 12.0417C26.9026 13.3472 25.3332 14 23.4998 14C23.1943 14 22.8054 13.9653 22.3332 13.8958C21.8609 13.8264 21.4721 13.75 21.1665 13.6667C21.9165 12.7778 22.4929 11.7917 22.8957 10.7083C23.2984 9.625 23.4998 8.5 23.4998 7.33334C23.4998 6.16667 23.2984 5.04167 22.8957 3.95834C22.4929 2.87501 21.9165 1.88889 21.1665 1.00001C21.5554 0.861116 21.9443 0.770838 22.3332 0.729172C22.7221 0.687505 23.1109 0.666672 23.4998 0.666672C25.3332 0.666672 26.9026 1.31945 28.2082 2.62501C29.5137 3.93056 30.1665 5.5 30.1665 7.33334ZM3.49984 24H23.4998V22.6667C23.4998 22.3611 23.4234 22.0833 23.2707 21.8333C23.1179 21.5833 22.9165 21.3889 22.6665 21.25C21.1665 20.5 19.6526 19.9375 18.1248 19.5625C16.5971 19.1875 15.0554 19 13.4998 19C11.9443 19 10.4026 19.1875 8.87484 19.5625C7.34706 19.9375 5.83317 20.5 4.33317 21.25C4.08317 21.3889 3.88178 21.5833 3.729 21.8333C3.57623 22.0833 3.49984 22.3611 3.49984 22.6667V24ZM13.4998 10.6667C14.4165 10.6667 15.2012 10.3403 15.854 9.6875C16.5068 9.03473 16.8332 8.25 16.8332 7.33334C16.8332 6.41667 16.5068 5.63195 15.854 4.97917C15.2012 4.32639 14.4165 4 13.4998 4C12.5832 4 11.7984 4.32639 11.1457 4.97917C10.4929 5.63195 10.1665 6.41667 10.1665 7.33334C10.1665 8.25 10.4929 9.03473 11.1457 9.6875C11.7984 10.3403 12.5832 10.6667 13.4998 10.6667Z" fill="white"/>
+      </svg>
+      <h3 class="pl-3">Usuários</h3>
+    </div>
+  </div>
+
+  <div class="icons flex flex-wrap md:justify-center md:content-center">
+    <!--Cadastrar usuário-->
+    <div class="iconeCadastrar flex mt-6 ml-4 py-3 px-2.5">
+      <!-- Mobile e Tablet -->
+      <a href=""><img class="imgIconCadUserMob" src="../../../assets/users/cadastrar_mob.svg" alt="Ícone de Cadastrar Usuário" /></a>
+      <!-- Mobile e Tablet Hover -->
+      <a><img class="imgIconCadUserMobHover" src="../../../assets/users/cadastrar_mob_hover.svg" alt="Ícone de Cadastrar Usuário ao passar o mouse" /></a>
+      <!-- Desktop -->
+      <a><img class="imgIconCadUser" src="../../../assets/users/cadastrar.svg" alt="Ícone de Cadastrar Usuário" /></a>
+      <!-- Desktop Hover -->
+      <a><img class="imgIconCadUserHover" src="../../../assets/users/cadastrar_hover.svg" alt="Ícone de Cadastrar Usuário ao passar o mouse" /></a>
+    </div>
+    <!--Consultar usuário-->
+    <div class="iconeConsultar flex mt-6 ml-4 py-3 px-2.5">
+      <!-- Mobile e Tablet -->
+      <a href=""><img class="imgIconConUserMob" src="../../../assets/users/consultar_mob.svg" alt="Ícone de Consultar Usuário" /></a>
+      <!-- Mobile e Tablet Hover -->
+      <a><img class="imgIconConUserMobHover" src="../../../assets/users/consultar_mob_hover.svg" alt="Ícone de Consultar Usuário ao passar o mouse" /></a>
+      <!-- Desktop -->
+      <a><img class="imgIconConUser" src="../../../assets/users/consultar.svg" alt="Ícone de Consultar Usuário" /></a>
+      <!-- Desktop Hover -->
+      <a><img class="imgIconConUserHover" src="../../../assets/users/consultar_hover.svg" alt="Ícone de Consultar Usuário ao passar o mouse" /></a>
+    </div>
+    <!--Configurar usuário-->
+    <div class="iconeConfigurar flex mt-6 ml-4 py-3 px-2.5">
+      <!-- Mobile e Tablet -->
+      <a href=""><img class="imgIconConfUserMob" src="../../../assets/users/configurar_mob.svg" alt="Ícone de Configurar Usuário" /></a>
+      <!-- Mobile e Tablet Hover -->
+      <a><img class="imgIconConfUserMobHover" src="../../../assets/users/configurar_mob_hover.svg" alt="Ícone de Configurar Usuário ao passar o mouse" /></a>
+      <!-- Desktop -->
+      <a><img class="imgIconConfUser" src="../../../assets/users/configurar.svg" alt="Ícone de Configurar Usuário" /></a>
+      <!-- Desktop Hover -->
+      <a><img class="imgIconConfUserHover" src="../../../assets/users/configurar_hover.svg" alt="Ícone de Configurar Usuário ao passar o mouse" /></a>
+    </div>
+  </div>
+  <div class="dadosUsuario mt-9 ml-4 mr-4">
+    <form action="#" method="post" class="lg:flex lg:flex-col lg:justify-center">
+      <h2 class="lg:ml-44">Dados Pessoais</h2>
+      <div class="lg:flex lg:flex-row lg:justify-center nomeCompleto mt-4">
+        <label for="nomeCompleto">*Nome completo: </label>
+        <input type="text" name="nomeCompleto" id="nomeCompleto" class="w-full lg:w-7/12">
+      </div>
+      <div class="lg:flex lg:flex-row lg:justify-center lg:gap-7 mb-4 infos dadosPessoais">     
+        <div class="lg:w-4/12 dados">
+          <div class="lg:flex lg:mt-3 login">
+            <label class="lg:w-5/12" for="login">*Login: </label>
+            <input type="text" name="login" id="login" class="w-full">
+          </div>
+        </div>
+        <div class="lg:w-4/12 contato">
+          <div class="lg:flex email lg:mt-4">
+            <label class="lg:w-4/12" for="email">*E-mail: </label>
+            <input type="text" name="email" id="email" class="w-full">
+          </div>
+        </div>
+      </div> 
+      <h2 class="lg:ml-44">Empresa</h2>  
+      <div class="lg:flex lg:justify-center lg:gap-8 mb-4 infos empresa">  
+        <div class="unidade mt-4">
+          <label for="unidade">*Unidade: </label>
+          <select name="unidade" id="unidade" class="w-full">
+            <option value="sicoob_ouroVerde">SICOOB OURO VERDE</option>
+            <option value="sicoob_londrina">SICOOB LONDRINA</option>
+          </select>
+        </div>
+        <div class="instituicao lg:mt-6">
+          <label for="instituicao">*Instituição: </label>
+          <select name="instituicao" id="instituicao" class="w-full">
+            <option value="sicoob_ouroVerde">SICOOB OURO VERDE</option>
+            <option value="sicoob_londrina">SICOOB LONDRINA</option>
+          </select>
+        </div>  
+        <div class="lg:w-2/12 lg:mt-6 perfil">
+          <label for="perfil">*Perfil: </label>
+          <select name="perfil" id="perfil" class="w-full">
+            <option value="Administrador">Administrador</option>
+            <option value="Operacional">Operacional</option>
+            <option value="Financeiro">Financeiro</option>
+            <option value="RH">RH</option>
+          </select>
+        </div>
+      </div>  
+      <div class="flex justify-center content-center items-center py-3 mt-9 mx-4 btProximo">
+        <button class="btn-next">PRÓXIMO</button>
+      </div>    
+    </form>
+  </div>
+</div>
