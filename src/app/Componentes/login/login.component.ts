@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, Validators, ReactiveFormsModule, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -8,19 +8,14 @@ import { JwtAuth } from '../../Models/jwtAuth';
 import { Login } from '../../Models/login';
 import { Register } from '../../Models/register';
 import { AuthenticationService } from '../../Services/authentication.service';
-import { faL } from '@fortawesome/free-solid-svg-icons';
-import { text } from 'stream/consumers';
-import ValidateForm from '../shared/validateForm';
-import { error } from 'console';
 import { CodVerificacao } from '../../Models/codVerificacao';
-
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [CommonModule, FormsModule, HttpClientModule, RouterModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
   type: string = "password";
@@ -34,8 +29,7 @@ export class LoginComponent implements OnInit {
   jwtDto = new JwtAuth();
   codVer = new CodVerificacao();
 
-  constructor(private authService: AuthenticationService, private fb: FormBuilder){
-  }
+  constructor(private authService: AuthenticationService, private fb: FormBuilder){}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -44,36 +38,26 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  OcultarVisuzlizarSenha() {
+  togglePasswordVisibility() {
     this.isText = !this.isText;
-
-    if(this.isText) {
-      document.getElementById("eyeIconOff")?.classList.toggle("hide");
-      document.getElementById("eyeIconOn")?.classList.toggle("hide");
-      this.type = "text";
-    }
-    else {
-      document.getElementById("eyeIconOff")?.classList.toggle("hide");
-      document.getElementById("eyeIconOn")?.classList.toggle("hide");
-      this.type = "password";
-    }   
+    this.type = this.isText ? "text" : "password";
   }
 
-  onLogin(loginDto: Login) {
+  onLogin() {
     if(this.loginForm.valid) {
-      this.authService.login(loginDto).subscribe((codVer) => {
-        sessionStorage.setItem('codigo', this.codVer.codigo);
+      this.loginDto.login = this.loginForm.get('username')?.value;
+      this.loginDto.senha = this.loginForm.get('password')?.value;
+      this.authService.login(this.loginDto).subscribe((codVer) => {
+        sessionStorage.setItem('codigo', codVer.codigo);
+        const modal = document.getElementById('modalAcessarCodVerificacao');
+        if (modal) {
+          modal.classList.add('show');
+          modal.style.display = 'block';
+        }
       });
-    }
-    else {
-      ValidateForm.validarFormsFiels(this.loginForm);
+    } else {
+      this.loginForm.markAllAsTouched();
       alert("Login e/ou Senha inválidos!");
     }
   }
-
-  /*loginJwt(loginDto: Login){
-    this.authService.login(loginDto).subscribe((jwtDto) => {
-      localStorage.setItem('jwtToken', this.jwtDto.token);
-    });
-  }*/
 }

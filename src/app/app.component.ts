@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LoginComponent } from "./Componentes/login/login.component";
 import { NavbarComponent } from './Componentes/navbar/navbar.component';
 import { HomeComponent } from './Componentes/home/home.component';
+import { LoginComponent } from './Componentes/login/login.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; 
 import { JwtAuth } from './Models/jwtAuth';

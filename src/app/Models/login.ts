@@ -1,4 +1,5 @@
 export class Login {
-    email: string = '';
+    login: string = '';
     senha: string = '';
+    codVerificacao = '';
 }
